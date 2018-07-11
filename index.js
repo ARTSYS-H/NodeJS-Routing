@@ -18,7 +18,7 @@ function sendError(errCode, errString, response)
 
 function sendFile(err, file, response) //fonction envoie du fichier
 {
-  if(err) return sendError(500, err, response); // erreur sur fichier (format ou autre)
+  if(err) return sendError(500, err, response); // erreur serveur  (format ou autre)
   response.writeHead(200);
   response.write(file, "binary");
   response.end();
